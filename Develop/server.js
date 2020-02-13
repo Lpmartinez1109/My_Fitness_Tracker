@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(logger("dev"));
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://fitness_tracker:marvel4life@ds147520.mlab.com:47520/heroku_kg2q12mk", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://tracker:marvel2020@ds147520.mlab.com:47520/heroku_kg2q12mk", {
   useNewUrlParser: true,
 });
 
