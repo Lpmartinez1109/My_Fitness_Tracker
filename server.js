@@ -13,10 +13,12 @@ app.use(express.static("public"));
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://tracker:marvel2020@ds147520.mlab.com:47520/heroku_kg2q12mk", {
   useNewUrlParser: true,
+  useFindAndModify: false
 });
 
 app.use(require("./routes/apiRoutes.js"));
 app.use(require("./routes/htmlRoutes.js"));
+
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
 });
